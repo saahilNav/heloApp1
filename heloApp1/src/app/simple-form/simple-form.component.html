@@ -1,0 +1,33 @@
+<p>
+  simple-form works! snjks
+</p>
+<div class="container">
+  <form>
+    <div class="form-group">
+      <label for="firstname">firstname</label>
+      <input required ngModel type="text" minlength="5" maxlength="20" pattern="NaviS" name="firstname" id="firstname" class="form-Control" #fname="ngModel"
+        (click)= "myFunction(fname)" autocomplete="off" ><br>
+      
+    
+    <div class="alert" *ngIf="!fname.valid && fname.touch">
+      plz fill the text
+    </div>
+   
+
+    <div *ngIf="fname.errors.minlength"> fill 5 length</div>
+
+    <div *ngIf="fname.errors.pattern">
+      see the pattern</div>
+
+  </div><br>
+    <div class="form-group">
+        <label>Password</label>
+      <input  ngModel name="password" type="password" id="password"class="formControl">
+
+      </div>
+    <div>
+      <input type="button" value="SUbmit">
+    </div><br>
+  </form>
+
+</div>

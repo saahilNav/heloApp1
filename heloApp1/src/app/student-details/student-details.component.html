@@ -1,0 +1,11 @@
+<p>
+  student-details works!
+</p>
+<div *ngFor="let colo of colors, let i=index">
+    {{colo}}
+   
+  </div>
+  <div> <app-student [parent]="prentInV"></app-student>
+  </div>
+  <div><app-image-array></app-image-array></div>
+  <div><router-outlet></router-outlet></div>

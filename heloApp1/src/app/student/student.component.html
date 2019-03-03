@@ -1,0 +1,22 @@
+<p>
+  student works!</p>
+
+ <div *ngFor="let obj of objects, let i=index, let f=first ,let l=last,let ev=even,let od=odd" >
+ {{obj.name}} -{{i}}-{{f}}-{{l}}-{{ev}}-{{od}}</div><br>
+ 
+ <div>{{parentdat}}</div>
+ <div>{{parent}}</div>
+  <button (click)="SendDataParent()">click me1</button>
+  <div *ngFor="let obj of araay1,let i=index, let f=firstname" >
+    {{obj}} -- {{i}} - {{f}}
+  </div>
+  <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+    show = {{show}}
+    <br>
+    <!-- <div *ngIf="show">Text to show</div> -->
+    <div *ngIf="show; else elseBlock"> text to show  </div>
+    <ng-template #elseBlock> else text show
+
+    </ng-template>
+
+  <div><router-outlet></router-outlet></div>

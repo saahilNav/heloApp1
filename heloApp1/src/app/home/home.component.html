@@ -1,0 +1,54 @@
+<p>
+  home works!
+</p>
+<div style="text-align:center">
+  <nav>
+   
+    <!-- <a routerLink="/student-details" routerLinkActive="active"> studentDetails</a> -->
+
+  
+  </nav>
+ <div>{{youT}}</div>
+
+ <div>{{childmsg}}</div>
+<div>
+  <button (click)="onFun()">EvenetBinding </button>  <input type="text" [value]="texts"  >
+  <br>
+  <button class="btn" [class.active]="isActive">active </button>
+  <button class="btn" [class.active]="isActive">active </button>
+  <button class="btn" [class.active]="isActive">active </button>
+  
+  <button class="btn" [class.active]="isActive">active </button>
+ 
+  <button class="btn" [class]="multipleclas">multipleClass </button>
+
+
+</div><br><br>
+<ng-container class="container">
+  <input type="text"   #email > 
+<button (click)="getEmail(email.value)">hanji</button> <br>
+{{text1}}
+</ng-container><br><br>
+<ng-container>
+  <input [(ngModel)]="emailN" (click)="onclickEMail()"> 
+</ng-container>
+  
+ <div><app-student (childOutPt)="childmsg=$event"  [parentdat]="inputVar"></app-student></div>
+
+<input type="text" [(ngModel)]="valuInput"  [style.font-size.px]="20"  [style.color]="red"  value="Bind" (click)="show($event)" ><br>
+<p>{{valuInput}}</p>
+<p [style.font-size.px]="50">
+  {{inputVaria}}
+
+</p><br>
+<input type="text" [value]="inputVaria"  [style.font-size.px]="20"  [style.color]="red" ><br> <br>
+
+
+<input type="text" [(ngModel)]="text1"  [style.font-size.px]="20"  ><br>
+<button [disabled]="currentValue" (click)="touppercase()" >uppercase</button>
+<button  (click)="tolowercase()" >lowercase</button>
+<p>{{ text1}}</p>
+<p>{{employe.id}} --{{employe.name}} --{{employe.exeperince}}</p>
+<h3 [innerText]="employe.name"></h3>
+
+
